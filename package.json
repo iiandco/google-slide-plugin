@@ -5,6 +5,7 @@
   "browser": {
     "child_process": false
   },
+  
   "child_process": false,
   "dependencies": {
     "@mui/x-data-grid": "^6.0.4",
@@ -51,9 +52,5 @@
       "last 1 firefox version",
       "last 1 safari version"
     ]
-  },
-  "devDependencies": {
-    "assert": "^2.0.0",
-    "buffer": "^6.0.3"
   }
 }
