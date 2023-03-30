@@ -1,5 +1,5 @@
 import React, { useEffect, useState } from "react";
-import { GoogleSlidesApi } from "./GoogleSlidesApi.ts";
+import { GoogleSlidesApi } from "./GoogleSlideAPI";
 
 interface SelectedElement {
   text: string;
