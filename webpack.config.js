@@ -4,6 +4,7 @@ module.exports = {
       fallback: {
         "querystring": false,
         "child_process": false,
+        "querystring":false,
         "os": false,
         "fs": false,
         "tls": false,
