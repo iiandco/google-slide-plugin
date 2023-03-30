@@ -1,0 +1,28 @@
+env: 
+ LOGIN: ${{ secrets.DOCKER_USERNAME }}
+ NAME: googleplugin
+ 
+name: googleplugin-auto-build
+on:
+ push:
+  branches:
+    - "master"
+jobs:
+  docker:
+   runs-on: ubuntu-latest
+   steps:
+    -
+     name: Login to DockerHub
+     uses: docker/login-action@v2
+     with:
+      username: ${{ secrets.DOCKER_USERNAME }}
+      password: ${{ secrets.DOCKER_PASSWORD }}
+    -
+     name: Checkout
+     uses: actions/checkout@v2
+    -
+      name: Build
+      run: docker build . --file Dockerfile -t $LOGIN/$NAME:latest
+    -
+     name: Push image to registry
+     run: docker push $LOGIN/$NAME:latest
