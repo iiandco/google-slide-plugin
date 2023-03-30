@@ -26,7 +26,7 @@ export const Sidebar: React.FC<SidebarProps> = ({ accessToken, presentationId })
               .map((textElement) => textElement.textRun?.content)
               .filter((content) => content)
               .join(""),
-            type: element.elementType || "",
+            type: element.shape.shapeType || "",
           });
         } else {
           setSelectedElement(null);
