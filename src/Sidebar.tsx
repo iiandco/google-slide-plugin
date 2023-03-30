@@ -20,9 +20,12 @@ export const Sidebar: React.FC<SidebarProps> = ({ accessToken, presentationId })
         const slide = presentation.data.slides[slideIndex];
         const element = slide.pageElements && slide.pageElements[elementIndex];
 
-        if (element && element.shape && element.shape.text) {
+        if (element && element.shape && element.shape.text && element.shape.text.textElements) {
           setSelectedElement({
-            text: element.shape.text.textElements.map((textElement) => textElement.textRun?.content).join(""),
+            text: element.shape.text.textElements
+              .map((textElement) => textElement.textRun?.content)
+              .filter((content) => content)
+              .join(""),
             type: element.elementType || "",
           });
         } else {
