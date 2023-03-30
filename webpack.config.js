@@ -2,6 +2,7 @@ module.exports = {
     resolve: {
     //   modules: [...],
       fallback: {
+        "os": require.resolve("os-browserify/browser"),
         "fs": false,
         "tls": false,
         "net": false,
