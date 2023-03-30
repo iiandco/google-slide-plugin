@@ -16,6 +16,7 @@
     "@types/react": "^18.0.31",
     "@types/react-dom": "^18.0.11",
     "child_process": "^1.0.2",
+    "fs": "^0.0.1-security",
     "googleapis": "^114.0.0",
     "googleapis-common": "^6.0.4",
     "open": "^9.1.0",
