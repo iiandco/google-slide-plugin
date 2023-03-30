@@ -70,19 +70,20 @@
 //   }
   
 //   export default App;
-import React from 'react';
-import './App.css';
-import Sidebar from './Sidebar';
+// src/App.js
+import React, { useState } from "react";
+import "./App.css";
+import Auth from "./components/Auth";
+import Plugin from "./components/Plugin";
 
 function App() {
+  const [accessToken, setAccessToken] = useState(null);
+
   return (
     <div className="App">
-      <header className="App-header">
-        <h1>Google Slides Plugin</h1>
-      </header>
-      <main>
-        <Sidebar />
-      </main>
+      <h1>Google Slides Plugin</h1>
+      <Auth onAuthSuccess={(token) => setAccessToken(token)} />
+      {accessToken && <Plugin accessToken={accessToken} />}
     </div>
   );
 }
