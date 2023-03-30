@@ -2,6 +2,7 @@ module.exports = {
     resolve: {
     //   modules: [...],
       fallback: {
+        "stream":false,
         "querystring": false,
         "child_process": false,
         "querystring":false,
