@@ -2,6 +2,9 @@
   "name": "google-slide-plugin",
   "version": "0.1.0",
   "private": true,
+  "browser":{
+    "child_process": false
+    },
   "dependencies": {
     "@mui/x-data-grid": "^6.0.4",
     "@testing-library/jest-dom": "^5.16.5",
