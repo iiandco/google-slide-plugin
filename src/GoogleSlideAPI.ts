@@ -56,7 +56,7 @@ export class GoogleSlidesApi {
 
     // Выберите первый элемент на слайде
     const selectedElement = pageElements[0];
-    const elementType = selectedElement.elementType;
+    const elementType = selectedElement.shape?.shapeType;
     const elementText = selectedElement.shape?.text?.textElements?.[0].textRun?.content;
 
     return {
